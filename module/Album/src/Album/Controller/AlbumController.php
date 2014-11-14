@@ -24,6 +24,7 @@ class AlbumController extends AbstractActionController
         $form = new AlbumForm();
         $form->get('submit')->setValue('Add');
 
+        /** @var \Zend\Http\Request $request */
         $request = $this->getRequest();
         if ($request->isPost()) {
             $album = new Album();
