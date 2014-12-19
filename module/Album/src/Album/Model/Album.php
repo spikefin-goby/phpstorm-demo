@@ -12,6 +12,9 @@ class Album implements InputFilterAwareInterface
     public $title;
     protected $inputFilter;
 
+    /**
+     * @param array $data
+     */
     public function exchangeArray(Array $data)
     {
         $this->id =  (!empty($data['id'])) ? $data['id'] : null;
